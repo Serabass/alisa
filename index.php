@@ -6,7 +6,7 @@ include_once 'response.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-SampleAlisa::instance()->init();
+SampleAlisa::instance()
 
     // ->when('помощь', 'хелп', 'помоги', fn () => response()
     //     ->text('Для выхода скажите "хватит"')
@@ -42,5 +42,5 @@ SampleAlisa::instance()->init();
     //     ->text('Я не знаю такой команды. Скажите помощь или попробуйте другую команду.')
     // )
 
-    // ->init()
+    ->init()
 ;

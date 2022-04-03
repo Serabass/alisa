@@ -257,7 +257,10 @@ abstract class Alisa
                     'message_id' => $this->data['session']['message_id'],
                     'user_id' => $this->data['session']['user_id']
                 ],
-                'response' => $this->process()
+                'response' => $this->process(),
+                'data' => [
+                    'historyStack' => $this->historyStack
+                ]
             ];
             header('Content-Type: application/json');
             echo json_encode($data);

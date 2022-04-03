@@ -12,6 +12,11 @@ class SampleAlisa extends Alisa {
       ->text('Привет! Я Алиса!')
       ->button('помощь');
   }
+
+  public function otherwise() {
+    return response()
+      ->text('Я не знаю такой команды. Скажите помощь или попробуйте другую команду.');
+  }
   
   #[When('помощь', 'хелп', 'помоги')]
   public function help() {
@@ -22,11 +27,6 @@ class SampleAlisa extends Alisa {
       ->button('хорош')
       ->button('стоп')
       ->button('харэ');
-  }
-
-  public function otherwise() {
-    return response()
-      ->text('Я не знаю такой команды. Скажите помощь или попробуйте другую команду.');
   }
 
   #[When('расскажи историю')]
