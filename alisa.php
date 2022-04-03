@@ -44,9 +44,6 @@ class Alisa {
     $textToCheck = mb_strtolower($textToCheck);
 
     if (empty($textToCheck)) {
-        /**
-         * Если пользователь ничего не спросил, то ничего не делаем.
-         */
         $cb = $this->helloCallback;
         return $cb();
     } else {
