@@ -22,11 +22,13 @@ class SampleAlisa extends Alisa {
   public function help() {
     return response()
       ->text('Для выхода скажите "хватит"')
-      ->button('хватит')
-      ->button('стопэ')
-      ->button('хорош')
-      ->button('стоп')
-      ->button('харэ');
+      ->buttons(
+        'хватит',
+        'стопэ',
+        'хорош',
+        'стоп',
+        'харэ',
+      );
   }
 
   #[When('расскажи историю')]

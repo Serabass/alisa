@@ -3878,3 +3878,87 @@
     },
     "version": "1.0"
 }
+2022-04-03 21:07:03
+{}
+2022-04-03 21:07:04
+{}
+2022-04-03 21:09:17
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd12-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "помощь",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 21:09:49
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd12-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "помощь",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}

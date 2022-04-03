@@ -29,7 +29,7 @@ class AlisaResponse
     return $button;
   }
 
-  public function buttons($buttons)
+  public function buttons(...$buttons)
   {
     $this->buttons = array_map(fn ($button) => $this->fixButton($button), $buttons);
     return $this;
