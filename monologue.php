@@ -1,13 +1,15 @@
 <?php
 
-class Monologue {
+class Monologue
+{
   private static $instance;
-  public static function instance($censored) {
-      return self::$instance ?? self::$instance = new Monologue($censored);    
+  public static function instance($censored)
+  {
+    return self::$instance ?? self::$instance = new Monologue($censored);
   }
 
   public $censored = false;
-  public $originalText = 
+  public $originalText =
   'Блять, да мне похуй на тебя, блять, слушай, какая у тебя там тачка, блять,
   квартиры, срачки там блять, яхты, всё, мне похуй, хоть там "Бэнтли",
   хоть блять нахуй "Майбах", хоть "Роллс-Ройс", хоть "Бугатти" блять,
@@ -116,14 +118,16 @@ class Monologue {
   пошел наслаждаться прекрасным осенним закатом на берегу 
   теплой южной реки. Всё, ступай, и я пойду';
 
-  public function __construct($censored) {
+  public function __construct($censored)
+  {
     $this->censored = $censored;
   }
 
-  public function getRandomSentence() {
+  public function getRandomSentence()
+  {
     $text = $this->censored ? $this->censoredText : $this->originalText;
     $lines = preg_split('/\s*[.!?]+\s*/i', $text);
-      
+
     return $lines[array_rand($lines)];
   }
 }

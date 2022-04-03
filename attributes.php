@@ -1,28 +1,34 @@
 <?php
 
 #[Attribute]
-class When {
+class When
+{
     public $commands = [];
 
-    public function __construct(...$commands) {
+    public function __construct(...$commands)
+    {
         $this->commands = $commands;
     }
 }
 
 #[Attribute]
-class WhenRegex {
+class WhenRegex
+{
     public $regex;
 
-    public function __construct($regex) {
+    public function __construct($regex)
+    {
         $this->regex = $regex;
     }
 }
 
 #[Attribute]
-class WhenHistory {
+class WhenHistory
+{
     public $historyId;
 
-    public function __construct($historyId) {
+    public function __construct($historyId)
+    {
         $this->historyId = $historyId;
     }
 }

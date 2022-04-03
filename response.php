@@ -1,22 +1,26 @@
 <?php
 
-class AlisaResponse {
+class AlisaResponse
+{
   public $text;
   public $tts;
   public $buttons = [];
   public $endSession = false;
 
-  public function text($text) {
+  public function text($text)
+  {
     $this->text = $text;
     return $this;
   }
 
-  public function tts($text) {
+  public function tts($text)
+  {
     $this->tts = $text;
     return $this;
   }
 
-  private function fixButton($button) {
+  private function fixButton($button)
+  {
     if (is_string($button)) {
       $button = [
         'title' => $button,
@@ -26,22 +30,26 @@ class AlisaResponse {
     return $button;
   }
 
-  public function buttons($buttons) {
+  public function buttons($buttons)
+  {
     $this->buttons = array_map(fn ($button) => $this->fixButton($button), $buttons);
     return $this;
   }
 
-  public function button($button) {
+  public function button($button)
+  {
     $this->buttons[] = $this->fixButton($button);
     return $this;
   }
 
-  public function endSession($endSession = true) {
+  public function endSession($endSession = true)
+  {
     $this->endSession = $endSession;
     return $this;
   }
 
-  public function toArray() {
+  public function toArray()
+  {
     $result = [
       'text' => $this->text,
     ];
@@ -62,6 +70,7 @@ class AlisaResponse {
   }
 }
 
-function response() {
+function response()
+{
   return new AlisaResponse();
 }

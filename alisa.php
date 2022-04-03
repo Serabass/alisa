@@ -1,156 +1,172 @@
 <?php
 
-abstract class Alisa {
-  private static $instance;
-  public static function instance() {
-    return static::$instance ?? static::$instance = new static();      
-  }
-
-  public $data;
-  public $commands = [];
-  public $historyCommands = [];
-  public $regexes = [];
-  public $dumpToTG = true;
-  private $reflectionClass;
-
-  public $historyStack = [];
-
-  public abstract function hello();
-  public abstract function otherwise();
-
-  private function updateHistory() {
-      if (empty($_SESSION['history'])) {
-        $_SESSION['history'] = [];
-      }
-      
-      $_SESSION['history'] = $this->historyStack;
-  }
-
-  public function findCommandByText($text) {
-    foreach ($this->commands as $command) {
-      if (in_array($text, $command['commands'])) {
-        return $command;
-      }
+abstract class Alisa
+{
+    protected static $instance;
+    public static function instance()
+    {
+        return static::$instance ?? static::$instance = new static();
     }
 
-    return null;
-  }
+    protected $data;
+    protected $commands = [];
+    protected $historyCommands = [];
+    protected $regexes = [];
+    protected $dumpToTG = true;
+    protected $reflectionClass;
 
-  public function findRegexByText($text) {
-    foreach ($this->regexes as $regex) {
-        if (preg_match($regex['regex'], $text)) {
-            return $regex;
+    protected $historyStack = [];
+
+    public abstract function hello();
+    public abstract function otherwise();
+
+    protected function updateHistory()
+    {
+        if (empty($_SESSION['history'])) {
+            $_SESSION['history'] = [];
         }
+
+        $_SESSION['history'] = $this->historyStack;
     }
 
-    return null;
-  }
-
-  private function fixCallbackResult($result) {
-    if ($result instanceof AlisaResponse) {
-        $result = $result->toArray();
-    }
-
-    if (is_string($result)) {
-        $result = response()->text($result)->toArray();
-    }
-
-    return $result;
-  }
-
-  public function process() {
-    /**
-     * Получаем что конкретно спросил пользователь
-     */
-    $text = $this->data['request']['command'];
-
-    /**
-     * Приводим на всякий случай запрос пользователя к нижнему регистру
-     */
-    $textToCheck = preg_replace('/\./i', '', $text);
-    $textToCheck = function_exists('mb_strtolower') ? mb_strtolower($textToCheck) : strtolower($textToCheck);
-
-    if (empty($textToCheck)) {
-        $hello = $this->reflectionClass->getMethod('hello');
-        $result = $hello->invoke($this);
-        return $this->fixCallbackResult($result);
-    } else {
-        $command = $this->findCommandByText($textToCheck);
-        if (empty($command)) {
-            $methods = $this->reflectionClass->getMethods();
-            $methods = array_filter($methods, function ($method) use ($textToCheck) {
-                return count($method->getAttributes(WhenHistory::class)) > 0;
-            });
-
-            $methods = array_values($methods);
-
-            if (count($methods) > 0) {
-                $first = $methods[0];
-                $result = $first->invoke($this, $textToCheck);
-                return $this->fixCallbackResult($result);
+    protected function findCommandByText($text)
+    {
+        foreach ($this->commands as $command) {
+            if (in_array($text, $command['commands'])) {
+                return $command;
             }
+        }
 
-            $regex = $this->findRegexByText($textToCheck);
+        return null;
+    }
 
-            if ($regex) {
-                if (preg_match($regex['regex'], $text, $matches)) {
-                    array_shift($matches);
-                    $result = $regex['callback']->invokeArgs($this, $matches);
+    protected function findRegexByText($text)
+    {
+        foreach ($this->regexes as $regex) {
+            if (preg_match($regex['regex'], $text)) {
+                return $regex;
+            }
+        }
+
+        return null;
+    }
+
+    protected function fixCallbackResult($result)
+    {
+        if ($result instanceof AlisaResponse) {
+            $result = $result->toArray();
+        }
+
+        if (is_string($result)) {
+            $result = response()->text($result)->toArray();
+        }
+
+        return $result;
+    }
+
+    protected function process()
+    {
+        /**
+         * Получаем что конкретно спросил пользователь
+         */
+        $text = $this->data['request']['command'];
+
+        /**
+         * Приводим на всякий случай запрос пользователя к нижнему регистру
+         */
+        $textToCheck = preg_replace('/\./i', '', $text);
+        $textToCheck = function_exists('mb_strtolower') ? mb_strtolower($textToCheck) : strtolower($textToCheck);
+
+        if (empty($textToCheck)) {
+            $hello = $this->reflectionClass->getMethod('hello');
+            $result = $hello->invoke($this);
+            return $this->fixCallbackResult($result);
+        } else {
+            $command = $this->findCommandByText($textToCheck);
+            if (empty($command)) {
+                $methods = $this->reflectionClass->getMethods();
+                $methods = array_filter($methods, function ($method) use ($textToCheck) {
+                    return count($method->getAttributes(WhenHistory::class)) > 0;
+                });
+
+                $methods = array_values($methods);
+
+                if (count($methods) > 0) {
+                    $first = $methods[0];
+                    $result = $first->invoke($this, $textToCheck);
                     return $this->fixCallbackResult($result);
                 }
+
+                $regex = $this->findRegexByText($textToCheck);
+
+                if ($regex) {
+                    if (preg_match($regex['regex'], $text, $matches)) {
+                        array_shift($matches);
+                        $result = $regex['callback']->invokeArgs($this, $matches);
+                        return $this->fixCallbackResult($result);
+                    }
+                }
+
+                return $this->fixCallbackResult($this->otherwise());
             }
 
-            return $this->fixCallbackResult($this->otherwise());
+            $result = $command['callback']->invoke($this);
+            return $this->fixCallbackResult($result);
         }
-
-        $result = $command['callback']->invoke($this);
-        return $this->fixCallbackResult($result);
     }
-  }
 
-    public function when(...$commands) {
+    public function when(...$commands)
+    {
         $callback = array_pop($commands);
         $this->commands[] = compact('commands', 'callback');
         return $this;
     }
 
-    public function whenHistory($historyId, $callback) {
+    public function whenHistory($historyId, $callback)
+    {
         $this->historyCommands[] = compact('historyId', 'callback');
         return $this;
     }
 
-    public function whenRegex($regex, $callback) {
+    public function whenRegex($regex, $callback)
+    {
         $this->regexes[] = compact('regex', 'callback');
         return $this;
     }
 
-    public function dumpToTG($value = true) {
+    public function dumpToTG($value = true)
+    {
         $this->dumpToTG = $value;
         return $this;
     }
 
-    public function pushHistory($historyId) {
+    public function pushHistory($historyId)
+    {
         $this->historyStack[$historyId] = [];
         $this->updateHistory();
         return $this;
     }
 
-    public function pushHistoryData($historyId, $data) {
+    protected function pushHistoryData($historyId, $data)
+    {
         $this->historyStack[$historyId][] = $data;
         $this->updateHistory();
         return $this;
     }
 
-    public function checkHistory($historyId) {
+    protected function checkHistory($historyId)
+    {
         return isset($this->historyStack[$historyId]);
     }
-    
-    public function clearHistory() {
+
+    protected function clearHistory()
+    {
         $this->historyStack = [];
         $this->updateHistory();
     }
-    
-    public function popHistory($historyId) {
+
+    protected function popHistory($historyId)
+    {
         $this->historyStack = array_filter(
             $this->historyStack,
             fn ($item) => $item != $historyId
@@ -158,97 +174,96 @@ abstract class Alisa {
         $this->updateHistory();
         return $this;
     }
-    
-  public function init() {
-    $dataRow = file_get_contents('php://input');
-    $this->data = json_decode($dataRow, true);
 
-    file_put_contents('alisalog.txt', date('Y-m-d H:i:s') . PHP_EOL . $dataRow . PHP_EOL, FILE_APPEND);
+    public function init()
+    {
+        $dataRow = file_get_contents('php://input');
+        $this->data = json_decode($dataRow, true);
 
-    if (!isset(
-        $this->data['request'],
-        $this->data['request']['command'],
-        $this->data['session'],
-        $this->data['session']['session_id'],
-        $this->data['session']['message_id'],
-        $this->data['session']['user_id']
-    )
-    ) {
-        return [];
-    }
+        file_put_contents('alisalog.txt', date('Y-m-d H:i:s') . PHP_EOL . $dataRow . PHP_EOL, FILE_APPEND);
 
-    $sessionId = $this->data['session']['session_id'];
+        if (!isset(
+            $this->data['request'],
+            $this->data['request']['command'],
+            $this->data['session'],
+            $this->data['session']['session_id'],
+            $this->data['session']['message_id'],
+            $this->data['session']['user_id']
+        )) {
+            return [];
+        }
 
-    session_id($sessionId);
-    session_start();
+        $sessionId = $this->data['session']['session_id'];
 
-    if (!isset($_SESSION['history'][$sessionId])) {
-        $_SESSION['history'][$sessionId] = [];
-    }
+        session_id($sessionId);
+        session_start();
 
-    $this->historyStack = $_SESSION['history'];
+        if (!isset($_SESSION['history'][$sessionId])) {
+            $_SESSION['history'][$sessionId] = [];
+        }
 
-    $this->reflectionClass = new ReflectionClass(static::class);
-    $listeners = [];
+        $this->historyStack = $_SESSION['history'];
 
-    $whenMethod = $this->reflectionClass->getMethod('when');
-    $whenHistoryMethod = $this->reflectionClass->getMethod('whenHistory');
-    $whenRegexMethod = $this->reflectionClass->getMethod('whenRegex');
+        $this->reflectionClass = new ReflectionClass(static::class);
 
-    foreach ($this->reflectionClass->getMethods() as $method) {
-      $whenAttributes = $method->getAttributes(When::class);
+        $whenMethod = $this->reflectionClass->getMethod('when');
+        $whenHistoryMethod = $this->reflectionClass->getMethod('whenHistory');
+        $whenRegexMethod = $this->reflectionClass->getMethod('whenRegex');
 
-      if (count($whenAttributes) > 0) {
-        foreach ($whenAttributes as $attribute) {
-            $when = $attribute->newInstance();
-            $args = [];
-  
-            foreach ($when->commands as $command) {
-                $args[] = $command;
+        foreach ($this->reflectionClass->getMethods() as $method) {
+            $whenAttributes = $method->getAttributes(When::class);
+
+            if (count($whenAttributes) > 0) {
+                foreach ($whenAttributes as $attribute) {
+                    $when = $attribute->newInstance();
+                    $args = [];
+
+                    foreach ($when->commands as $command) {
+                        $args[] = $command;
+                    }
+
+                    $whenMethod->invokeArgs($this, [...$args, $method]);
+                }
+
+                continue;
             }
-  
-            $whenMethod->invokeArgs($this, [...$args, $method]);
+
+            $whenHistoryAttributes = $method->getAttributes(WhenHistory::class);
+            if (count($whenHistoryAttributes) > 0) {
+                foreach ($whenHistoryAttributes as $attribute) {
+                    $whenHistory = $attribute->newInstance();
+                    $whenHistoryMethod->invokeArgs($this, [$whenHistory->historyId, $method]);
+                }
+
+                continue;
+            }
+
+            $whenRegexAttributes = $method->getAttributes(WhenRegex::class);
+            if (count($whenRegexAttributes) > 0) {
+                foreach ($whenRegexAttributes as $attribute) {
+                    $whenRegex = $attribute->newInstance();
+                    $whenRegexMethod->invokeArgs($this, [$whenRegex->regex, $method]);
+                }
+
+                continue;
+            }
         }
 
-        continue;
-      }
-
-      $whenHistoryAttributes = $method->getAttributes(WhenHistory::class);
-      if (count($whenHistoryAttributes) > 0) {
-        foreach ($whenHistoryAttributes as $attribute) {
-            $whenHistory = $attribute->newInstance();
-            $whenHistoryMethod->invokeArgs($this, [$whenHistory->historyId, $method]);
+        try {
+            $data = [
+                'version' => '1.0',
+                'session' => [
+                    'session_id' => $this->data['session']['session_id'],
+                    'message_id' => $this->data['session']['message_id'],
+                    'user_id' => $this->data['session']['user_id']
+                ],
+                'response' => $this->process()
+            ];
+            header('Content-Type: application/json');
+            echo json_encode($data);
+        } catch (\Exception $e) {
+            header('Content-Type: application/json');
+            echo '["Error occured"]';
         }
-
-        continue;
-      }
-
-      $whenRegexAttributes = $method->getAttributes(WhenRegex::class);
-      if (count($whenRegexAttributes) > 0) {
-        foreach ($whenRegexAttributes as $attribute) {
-            $whenRegex = $attribute->newInstance();
-            $whenRegexMethod->invokeArgs($this, [$whenRegex->regex, $method]);
-        }
-
-        continue;
-      }
     }
-
-    try {
-        $data = [
-            'version' => '1.0',
-            'session' => [
-                'session_id' => $this->data['session']['session_id'],
-                'message_id' => $this->data['session']['message_id'],
-                'user_id' => $this->data['session']['user_id']
-            ],
-            'response' => $this->process()
-        ];
-        header('Content-Type: application/json');
-        echo json_encode($data);
-    } catch(\Exception $e) {
-        header('Content-Type: application/json'); 
-        echo '["Error occured"]';
-    }
-  }
 }

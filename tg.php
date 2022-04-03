@@ -1,6 +1,7 @@
 <?php
 
-function sendMessage($text) {
+function sendMessage($text)
+{
     $token = '...';
 
     // initialise variables here
@@ -12,12 +13,12 @@ function sendMessage($text) {
     $reply_markup = null;
 
     $data = array(
-            'chat_id' => urlencode($chat_id),
-            'text' => urlencode($text),
-            'disable_web_page_preview' => urlencode($disable_web_page_preview),
-            'reply_to_message_id' => urlencode($reply_to_message_id),
-            'reply_markup' => urlencode($reply_markup)
-        );
+        'chat_id' => urlencode($chat_id),
+        'text' => urlencode($text),
+        'disable_web_page_preview' => urlencode($disable_web_page_preview),
+        'reply_to_message_id' => urlencode($reply_to_message_id),
+        'reply_markup' => urlencode($reply_markup)
+    );
 
     $url = 'https://api.telegram.org/bot' . $token . '/sendMessage';
 
