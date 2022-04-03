@@ -1,9 +1,12 @@
 <?php
 
 include_once 'alisa.php';
-include_once 'when.php';
+include_once 'attributes.php';
+include_once 'monologue.php';
 
 class SampleAlisa extends Alisa {
+  public const WORDS_HISTORY = 'words_history';
+
   public function hello() {
     return response()
       ->text('Привет! Я Алиса!')
@@ -42,25 +45,16 @@ class SampleAlisa extends Alisa {
 
   #[When('монолог')]
   public function monologue() {
-    return response()
-      ->text(
-          Monologue::instance(true)->getRandomSentence()
-      );
+    return Monologue::instance(true)->getRandomSentence();
   }
 
   #[When('монолог без цензуры')]
   public function monologUncensored() {
-    return response()
-      ->text(
-          Monologue::instance(false)->getRandomSentence()
-      );
+    return Monologue::instance(false)->getRandomSentence();
   }
 
-  #[When('дом')]
-  public function home() {
-    return response()
-      ->text(
-          "дом дом"
-      );
+  #[WhenHistory(self::WORDS_HISTORY)]
+  public function words($command) {
+    return $command . ' ' . $command;
   }
 }

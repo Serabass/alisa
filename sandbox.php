@@ -28,5 +28,3 @@ abstract class Alisa {
 
 $s = SandboxAlisa::instance();
 $s->init();
-
-var_dump($s->commands); die;

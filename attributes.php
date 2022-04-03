@@ -8,3 +8,12 @@ class When {
         $this->commands = $commands;
     }
 }
+
+#[Attribute]
+class WhenHistory {
+    public $historyId;
+
+    public function __construct($historyId) {
+        $this->historyId = $historyId;
+    }
+}

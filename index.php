@@ -2,7 +2,6 @@
 
 include_once 'instance.php';
 include_once 'response.php';
-include_once 'monologue.php';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
