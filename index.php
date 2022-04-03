@@ -1,12 +1,12 @@
 <?php
 
-include_once 'instance.php';
+include_once 'towns.php';
 include_once 'response.php';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-SampleAlisa::instance()
+TownsAlisa::instance()
 
     // ->when('помощь', 'хелп', 'помоги', fn () => response()
     //     ->text('Для выхода скажите "хватит"')

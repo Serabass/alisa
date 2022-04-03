@@ -2278,3 +2278,1523 @@
     },
     "version": "1.0"
 }
+2022-04-03 19:26:55
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:26:57
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:26:58
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:26:58
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:26:58
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:29:41
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:32:18
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:32:23
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:33:33
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:34:16
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:34:18
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:34:19
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:34:20
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:34:21
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:34:21
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:34:22
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:34:22
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:34:22
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:34:22
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f1357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:34:33
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:35:11
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:35:48
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:36:52
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:36:53
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:36:54
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "334343",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:36:59
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "Алматы",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:42:36
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "Алматы",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:42:45
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "Астана",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:43:03
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "Астана",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:43:03
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "Астана",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:43:14
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd12-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "Астана",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:43:36
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd12-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "Астана",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:44:00
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd12-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "Астана",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:44:02
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd12-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "Астана",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:44:02
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd12-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "Астана",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:44:07
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd12-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "Питер",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:46:26
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd12-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "Питер",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-03 19:46:37
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f0357ad2-c881-40e2-bd12-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "помощь",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
