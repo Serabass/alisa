@@ -6,11 +6,10 @@ include_once 'monologue.php';
 
 class SampleAlisa extends Alisa {
   public const TOWNS_HISTORY = 'towns_history';
-
+ 
   public function hello() {
     return response()
-      ->text('Привет! Я Алиса!')
-      ->button('помощь');
+      ->text('Привет! Я Алиса!');
   }
 
   public function otherwise() {
