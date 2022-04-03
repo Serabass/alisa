@@ -86,7 +86,6 @@ class Alisa {
   }
 
   public function init() {
-
       $dataRow = file_get_contents('php://input');
       $this->data = json_decode($dataRow, true);
 
