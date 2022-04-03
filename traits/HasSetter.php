@@ -8,15 +8,20 @@ trait HasSetters
     $props = $reflection->getProperties();
 
     foreach ($props as $prop) {
+      if ($prop->getName() !== $name) {
+        continue;
+      }
+
       $attrs = $prop->getAttributes(Setter::class);
       foreach ($attrs as $attr) {
         $instance = $attr->newInstance();
 
-        if ($instance->defaultValue !== null) {
+        if (count($arguments) === 0) {
           $prop->setValue($this, $instance->defaultValue);
+        } else {
+          [$value] = $arguments;
+          $prop->setValue($this, $value);
         }
-
-        continue;
       }
     }
 

@@ -11,9 +11,10 @@ include_once 'traits/HasSetter.php';
 class AlisaResponse
 {
   use HasSetters;
-  #[Setter]                       public $text;
-  #[Setter]                       public $tts;
-  #[Setter(defaultValue: true)]   public $endSession = false;
+
+  #[Setter]       public $text;
+  #[Setter]       public $tts;
+  #[Setter(true)] public $endSession = false;
 
   public $buttons = [];
 
