@@ -10,6 +10,15 @@ class When {
 }
 
 #[Attribute]
+class WhenRegex {
+    public $regex;
+
+    public function __construct($regex) {
+        $this->regex = $regex;
+    }
+}
+
+#[Attribute]
 class WhenHistory {
     public $historyId;
 

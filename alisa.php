@@ -9,6 +9,7 @@ abstract class Alisa {
   public $data;
   public $commands = [];
   public $historyCommands = [];
+  public $regexes = [];
   public $dumpToTG = true;
   private $reflectionClass;
 
@@ -30,6 +31,16 @@ abstract class Alisa {
       if (in_array($text, $command['commands'])) {
         return $command;
       }
+    }
+
+    return null;
+  }
+
+  public function findRegexByText($text) {
+    foreach ($this->regexes as $regex) {
+        if (preg_match($regex['regex'], $text)) {
+            return $regex;
+        }
     }
 
     return null;
@@ -79,6 +90,14 @@ abstract class Alisa {
                 return $this->fixCallbackResult($result);
             }
 
+            $regex = $this->findRegexByText($textToCheck);
+
+            if (preg_match($regex['regex'], $text, $matches)) {
+                array_shift($matches);
+                $result = $regex['callback']->invokeArgs($this, $matches);
+                return $this->fixCallbackResult($result);
+            }
+
             return $this->fixCallbackResult($this->otherwise());
         }
 
@@ -95,6 +114,11 @@ abstract class Alisa {
 
     public function whenHistory($historyId, $callback) {
         $this->historyCommands[] = compact('historyId', 'callback');
+        return $this;
+    }
+
+    public function whenRegex($regex, $callback) {
+        $this->regexes[] = compact('regex', 'callback');
         return $this;
     }
 
@@ -167,6 +191,7 @@ abstract class Alisa {
 
     $whenMethod = $this->reflectionClass->getMethod('when');
     $whenHistoryMethod = $this->reflectionClass->getMethod('whenHistory');
+    $whenRegexMethod = $this->reflectionClass->getMethod('whenRegex');
 
     foreach ($this->reflectionClass->getMethods() as $method) {
       $whenAttributes = $method->getAttributes(When::class);
@@ -182,6 +207,8 @@ abstract class Alisa {
   
             $whenMethod->invokeArgs($this, [...$args, $method]);
         }
+
+        continue;
       }
 
       $whenHistoryAttributes = $method->getAttributes(WhenHistory::class);
@@ -190,6 +217,18 @@ abstract class Alisa {
             $whenHistory = $attribute->newInstance();
             $whenHistoryMethod->invokeArgs($this, [$whenHistory->historyId, $method]);
         }
+
+        continue;
+      }
+
+      $whenRegexAttributes = $method->getAttributes(WhenRegex::class);
+      if (count($whenRegexAttributes) > 0) {
+        foreach ($whenRegexAttributes as $attribute) {
+            $whenRegex = $attribute->newInstance();
+            $whenRegexMethod->invokeArgs($this, [$whenRegex->regex, $method]);
+        }
+
+        continue;
       }
     }
 
@@ -201,10 +240,7 @@ abstract class Alisa {
                 'message_id' => $this->data['session']['message_id'],
                 'user_id' => $this->data['session']['user_id']
             ],
-            'response' => $this->process(),
-            'data' => [
-                's' => $_SESSION
-            ]
+            'response' => $this->process()
         ];
         header('Content-Type: application/json');
         echo json_encode($data);

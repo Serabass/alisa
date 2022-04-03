@@ -60,9 +60,19 @@ class SampleAlisa extends Alisa {
     return 'играем в города. поехали';
   }
 
-  #[WhenHistory(self::TOWNS_HISTORY)]
-  public function towns($command) {
-    $this->pushHistoryData(self::TOWNS_HISTORY, $command);
-    return join(' ', $this->historyStack[self::TOWNS_HISTORY]);
+  // #[WhenHistory(self::TOWNS_HISTORY)]
+  // public function towns($command) {
+  //   $this->pushHistoryData(self::TOWNS_HISTORY, $command);
+  //   return join(' ', $this->historyStack[self::TOWNS_HISTORY]);
+  // }
+
+  #[WhenRegex('/^скажи (\w+) (\d+) раза?$/iu')]
+  public function repeat($word, $count) {
+    return str_repeat($word . ' ', $count);
+  }
+
+  #[WhenRegex('/^свистни (\d+) раз?$/iu')]
+  public function whistle($count) {
+    return str_repeat('свист ', $count);
   }
 }
