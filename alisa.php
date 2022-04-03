@@ -22,6 +22,16 @@ class Alisa {
     return null;
   }
 
+  private function fixCallbackResult(callable $cb) {
+    $result = $cb();
+
+    if ($result instanceof AlisaResponse) {
+        $result = $result->toArray();
+    }
+
+    return $result;
+  }
+
   public function process() {
     if (!isset($this->data['request'], $this->data['request']['command'], $this->data['session'], $this->data['session']['session_id'], $this->data['session']['message_id'], $this->data['session']['user_id'])) {
         /**
@@ -44,23 +54,15 @@ class Alisa {
     $textToCheck = mb_strtolower($textToCheck);
 
     if (empty($textToCheck)) {
-        $cb = $this->helloCallback;
-        return $cb();
+        return $this->fixCallbackResult($this->helloCallback);
     } else {
         $command = $this->findCommandByText($textToCheck);
 
         if (empty($command)) {
-            $cb = $this->otherwiseCallback;
-            $result = $cb();
-
-            if ($result instanceof AlisaResponse) {
-                $result = $result->toArray();
-            }
-
-            return $result;
+            return $this->fixCallbackResult($this->otherwiseCallback);
         }
 
-        return $command['callback']();
+        return $this->fixCallbackResult($command['callback']);
     }
   }
 
