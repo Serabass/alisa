@@ -17,6 +17,14 @@ abstract class Alisa {
   public abstract function hello();
   public abstract function otherwise();
 
+  private function updateHistory() {
+      if (empty($_SESSION['history'])) {
+        $_SESSION['history'] = [];
+      }
+      
+      $_SESSION['history'] = $this->historyStack;
+  }
+
   public function findCommandByText($text) {
     foreach ($this->commands as $command) {
       if (in_array($text, $command['commands'])) {
@@ -57,8 +65,20 @@ abstract class Alisa {
         return $this->fixCallbackResult($result);
     } else {
         $command = $this->findCommandByText($textToCheck);
-
         if (empty($command)) {
+            $methods = $this->reflectionClass->getMethods();
+            $methods = array_filter($methods, function ($method) use ($textToCheck) {
+                return count($method->getAttributes(WhenHistory::class)) > 0;
+            });
+
+            $methods = array_values($methods);
+
+            if (count($methods) > 0) {
+                $first = $methods[0];
+                $result = $first->invoke($this, $textToCheck);
+                return $this->fixCallbackResult($result);
+            }
+
             return $this->fixCallbackResult($this->otherwise());
         }
 
@@ -78,11 +98,35 @@ abstract class Alisa {
         return $this;
     }
 
-  public function dumpToTG($value = true) {
-      $this->dumpToTG = $value;
-      return $this;
-  }
+    public function dumpToTG($value = true) {
+        $this->dumpToTG = $value;
+        return $this;
+    }
 
+    public function pushHistory($historyId) {
+        $this->historyStack[] = $historyId;
+        $this->updateHistory();
+        return $this;
+    }
+
+    public function checkHistory($historyId) {
+        return in_array($historyId, $this->historyStack);
+    }
+    
+    public function clearHistory() {
+        $this->historyStack = [];
+        $this->updateHistory();
+    }
+    
+    public function popHistory($historyId) {
+        $this->historyStack = array_filter(
+            $this->historyStack,
+            fn ($item) => $item != $historyId
+        );
+        $this->updateHistory();
+        return $this;
+    }
+    
   public function init() {
     $dataRow = file_get_contents('php://input');
     $this->data = json_decode($dataRow, true);
@@ -103,6 +147,8 @@ abstract class Alisa {
 
     session_id($this->data['session']['session_id']);
     session_start();
+
+    $this->historyStack = $_SESSION['history'];
 
     $this->reflectionClass = new ReflectionClass(static::class);
     $listeners = [];
@@ -143,7 +189,10 @@ abstract class Alisa {
                 'message_id' => $this->data['session']['message_id'],
                 'user_id' => $this->data['session']['user_id']
             ],
-            'response' => $this->process()
+            'response' => $this->process(),
+            'data' => [
+                's' => $_SESSION
+            ]
         ];
         header('Content-Type: application/json');
         echo json_encode($data);

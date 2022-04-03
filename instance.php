@@ -5,7 +5,7 @@ include_once 'attributes.php';
 include_once 'monologue.php';
 
 class SampleAlisa extends Alisa {
-  public const WORDS_HISTORY = 'words_history';
+  public const TOWNS_HISTORY = 'towns_history';
 
   public function hello() {
     return response()
@@ -38,6 +38,7 @@ class SampleAlisa extends Alisa {
 
   #[When('алиса хватит', 'хватит', 'выход', 'стоп', 'стопэ', 'харэ', 'хорош')]
   public function stop() {
+    $this->clearHistory();
     return response()
       ->text('Приятного дня')
       ->endSession();
@@ -53,8 +54,14 @@ class SampleAlisa extends Alisa {
     return Monologue::instance(false)->getRandomSentence();
   }
 
-  #[WhenHistory(self::WORDS_HISTORY)]
-  public function words($command) {
+  #[When('города')]
+  public function townsGame() {
+    $this->pushHistory(self::TOWNS_HISTORY);
+    return 'играем в города. поехали';
+  }
+
+  #[WhenHistory(self::TOWNS_HISTORY)]
+  public function towns($command) {
     return $command . ' ' . $command;
   }
 }
