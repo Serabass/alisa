@@ -23,48 +23,48 @@ class Alisa {
   }
 
   public function process() {
-        if (!isset($this->data['request'], $this->data['request']['command'], $this->data['session'], $this->data['session']['session_id'], $this->data['session']['message_id'], $this->data['session']['user_id'])) {
-            /**
-             * Нет всех необходимых полей. Не понятно, что вернуть, поэтому возвращаем ничего.
-             */
-            return [];
-        }
+    if (!isset($this->data['request'], $this->data['request']['command'], $this->data['session'], $this->data['session']['session_id'], $this->data['session']['message_id'], $this->data['session']['user_id'])) {
         /**
-         * Получаем что конкретно спросил пользователь
+         * Нет всех необходимых полей. Не понятно, что вернуть, поэтому возвращаем ничего.
          */
-        $text = $this->data['request']['command'];
+        return [];
+    }
+    /**
+     * Получаем что конкретно спросил пользователь
+     */
+    $text = $this->data['request']['command'];
 
-        session_id($this->data['session']['session_id']); // В Чате спрашивали неодногравтно как использовать сессии в навыке - показываю
-        session_start();
+    session_id($this->data['session']['session_id']); // В Чате спрашивали неодногравтно как использовать сессии в навыке - показываю
+    session_start();
 
+    /**
+     * Приводим на всякий случай запрос пользователя к нижнему регистру
+     */
+    $textToCheck = preg_replace('/\./i', '', $text);
+    $textToCheck = mb_strtolower($textToCheck);
+
+    if (empty($textToCheck)) {
         /**
-         * Приводим на всякий случай запрос пользователя к нижнему регистру
+         * Если пользователь ничего не спросил, то ничего не делаем.
          */
-        $textToCheck = preg_replace('/\./i', '', $text);
-        $textToCheck = mb_strtolower($textToCheck);
+        $cb = $this->helloCallback;
+        return $cb();
+    } else {
+        $command = $this->findCommandByText($textToCheck);
 
-        if (empty($textToCheck)) {
-            /**
-             * Если пользователь ничего не спросил, то ничего не делаем.
-             */
-            $cb = $this->helloCallback;
-            return $cb();
-        } else {
-            $command = $this->findCommandByText($textToCheck);
+        if (empty($command)) {
+            $cb = $this->otherwiseCallback;
+            $result = $cb();
 
-            if (empty($command)) {
-                $cb = $this->otherwiseCallback;
-                $result = $cb();
-
-                if ($result instanceof AlisaResponse) {
-                    $result = $result->toArray();
-                }
-
-                return $result;
+            if ($result instanceof AlisaResponse) {
+                $result = $result->toArray();
             }
 
-            return $command['callback']();
+            return $result;
         }
+
+        return $command['callback']();
+    }
   }
 
   public function when(...$commands) {
