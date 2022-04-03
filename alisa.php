@@ -92,7 +92,6 @@ class Alisa {
 
       file_put_contents('alisalog.txt', date('Y-m-d H:i:s') . PHP_EOL . $dataRow . PHP_EOL, FILE_APPEND);
 
-
       try {
           $data = [
               'version' => '1.0',
@@ -106,7 +105,7 @@ class Alisa {
           header('Content-Type: application/json');
           echo json_encode($data);
       } catch(\Exception $e) {
-          header('Content-Type: application/json');
+          header('Content-Type: application/json'); 
           echo '["Error occured"]';
       }
   }
