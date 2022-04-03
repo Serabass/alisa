@@ -23,59 +23,53 @@ class Alisa {
   }
 
   public function process() {
-      if (!isset($this->data['request'], $this->data['request']['command'], $this->data['session'], $this->data['session']['session_id'], $this->data['session']['message_id'], $this->data['session']['user_id'])) {
-          /**
-           * Нет всех необходимых полей. Не понятно, что вернуть, поэтому возвращаем ничего.
-           */
-          return [];
-      } else {
-          /**
-           * Получаем что конкретно спросил пользователь
-           */
-          $text = $this->data['request']['command'];
- 
-          session_id($this->data['session']['session_id']); // В Чате спрашивали неодногравтно как использовать сессии в навыке - показываю
-          session_start();
+        if (!isset($this->data['request'], $this->data['request']['command'], $this->data['session'], $this->data['session']['session_id'], $this->data['session']['message_id'], $this->data['session']['user_id'])) {
+            /**
+             * Нет всех необходимых полей. Не понятно, что вернуть, поэтому возвращаем ничего.
+             */
+            return [];
+        }
+        /**
+         * Получаем что конкретно спросил пользователь
+         */
+        $text = $this->data['request']['command'];
 
-          /**
-           * Приводим на всякий случай запрос пользователя к нижнему регистру
-           */
-          $textToCheck = preg_replace('/\./i', '', $text);
-          $textToCheck = mb_strtolower($textToCheck);
+        session_id($this->data['session']['session_id']); // В Чате спрашивали неодногравтно как использовать сессии в навыке - показываю
+        session_start();
 
-          if (empty($textToCheck)) {
-              /**
-               * Если пользователь ничего не спросил, то ничего не делаем.
-               */
-              $cb = $this->helloCallback;
-              return $cb();
-          } else {
-              $command = $this->findCommandByText($textToCheck);
+        /**
+         * Приводим на всякий случай запрос пользователя к нижнему регистру
+         */
+        $textToCheck = preg_replace('/\./i', '', $text);
+        $textToCheck = mb_strtolower($textToCheck);
 
-              if (empty($command)) {
-                  $cb = $this->otherwiseCallback;
-                  $result = $cb();
+        if (empty($textToCheck)) {
+            /**
+             * Если пользователь ничего не спросил, то ничего не делаем.
+             */
+            $cb = $this->helloCallback;
+            return $cb();
+        } else {
+            $command = $this->findCommandByText($textToCheck);
 
-                  if ($result instanceof AlisaResponse) {
-                      $result = $result->toArray();
-                  }
+            if (empty($command)) {
+                $cb = $this->otherwiseCallback;
+                $result = $cb();
 
-                  return $result;
-              }
+                if ($result instanceof AlisaResponse) {
+                    $result = $result->toArray();
+                }
 
-              return $command['callback']();
-          }
-      }
+                return $result;
+            }
+
+            return $command['callback']();
+        }
   }
 
   public function when(...$commands) {
-      $cb = array_pop($commands);
-
-      $this->commands[] = [
-          'commands' => $commands,
-          'callback' => $cb
-      ];
-
+      $callback = array_pop($commands);
+      $this->commands[] = compact('commands', 'callback');
       return $this;
   }
 
