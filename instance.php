@@ -60,6 +60,6 @@ class SampleAlisa extends Alisa {
 
   #[WhenRegex('/^свистни (\d+) раз?$/iu')]
   public function whistle($count) {
-    return join(' ', array_fill(0, $count, 'свист'));
+    return join(' ', array_fill(0, $count, 'фью'));
   }
 }
