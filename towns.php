@@ -33,10 +33,6 @@ class TownsAlisa extends Alisa {
     ;
   }
 
-  private function getRandomTown() {
-    return $this->towns[array_rand($this->towns)];
-  }
-
   private function getNextTownByLastChar($town) {
     $town = mb_strtolower($town);
     $lastChar = mb_substr($town, -1);

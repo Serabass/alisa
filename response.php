@@ -1,23 +1,21 @@
 <?php
 
+include_once 'attributes.php';
+include_once 'traits/HasSetter.php';
+
+/**
+ * @method AlisaResponse text(string $text)
+ * @method AlisaResponse tts(string $tts)
+ * @method AlisaResponse endSession(string $endSession = true)
+ */
 class AlisaResponse
 {
-  public $text;
-  public $tts;
+  use HasSetters;
+  #[Setter]                       public $text;
+  #[Setter]                       public $tts;
+  #[Setter(defaultValue: true)]   public $endSession = false;
+
   public $buttons = [];
-  public $endSession = false;
-
-  public function text($text)
-  {
-    $this->text = $text;
-    return $this;
-  }
-
-  public function tts($text)
-  {
-    $this->tts = $text;
-    return $this;
-  }
 
   private function fixButton($button)
   {
@@ -39,12 +37,6 @@ class AlisaResponse
   public function button($button)
   {
     $this->buttons[] = $this->fixButton($button);
-    return $this;
-  }
-
-  public function endSession($endSession = true)
-  {
-    $this->endSession = $endSession;
     return $this;
   }
 
@@ -79,6 +71,5 @@ function endSession($text)
 {
   return response()
     ->text($text)
-    ->endSession()
-  ;
+    ->endSession();
 }

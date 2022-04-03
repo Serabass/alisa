@@ -32,3 +32,14 @@ class WhenHistory
         $this->historyId = $historyId;
     }
 }
+
+#[Attribute]
+class Setter
+{
+  public $defaultValue;
+
+  public function __construct($defaultValue = null)
+  {
+    $this->defaultValue = $defaultValue;
+  }
+}
