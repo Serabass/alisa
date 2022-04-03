@@ -19,6 +19,8 @@ Alisa::instance()
         return response()
             ->text('Для выхода скажите "Алиса хватит"')
             ->button('хватит')
+            ->button('хватит1')
+            ->button('хватит2')
         ;
     })
     ->when('расскажи историю', function () {
@@ -26,7 +28,7 @@ Alisa::instance()
             ->text('Бежит как-то ёжик по травке и хохочет')
         ;
     })
-    ->when('хватит', 'выход', 'стоп', function () {
+    ->when('алиса хватит', 'хватит', 'выход', 'стоп', function () {
         return response()
             ->text('Приятного дня')
             ->endSession()
