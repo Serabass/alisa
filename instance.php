@@ -24,7 +24,6 @@ class SampleAlisa extends Alisa {
       ->button('харэ');
   }
 
-  #[When('помощь', 'хелп', 'помоги')]
   public function otherwise() {
     return response()
       ->text('Я не знаю такой команды. Скажите помощь или попробуйте другую команду.');

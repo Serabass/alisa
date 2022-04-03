@@ -92,10 +92,12 @@ abstract class Alisa {
 
             $regex = $this->findRegexByText($textToCheck);
 
-            if (preg_match($regex['regex'], $text, $matches)) {
-                array_shift($matches);
-                $result = $regex['callback']->invokeArgs($this, $matches);
-                return $this->fixCallbackResult($result);
+            if ($regex) {
+                if (preg_match($regex['regex'], $text, $matches)) {
+                    array_shift($matches);
+                    $result = $regex['callback']->invokeArgs($this, $matches);
+                    return $this->fixCallbackResult($result);
+                }
             }
 
             return $this->fixCallbackResult($this->otherwise());
