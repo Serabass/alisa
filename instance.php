@@ -58,7 +58,7 @@ class SampleAlisa extends Alisa {
     return join(' ', array_fill(0, $count, $word));
   }
 
-  #[WhenRegex('/^свистни (\d+) раз?$/iu')]
+  #[WhenRegex('/^свистни (\d+) раза?$/iu')]
   public function whistle($count) {
     return join(' ', array_fill(0, $count, 'фью'));
   }
