@@ -1,16 +1,20 @@
 <?php
 
-class Alisa {
+abstract class Alisa {
   private static $instance;
   public static function instance() {
-      return self::$instance ?? self::$instance = new Alisa();    
+    return static::$instance ?? static::$instance = new static();      
   }
 
   public $data;
   public $commands = [];
   public $otherwiseCallback;
   public $helloCallback;
+  public $reflectionClass;
   public $dumpToTG = true;
+
+  public abstract function hello();
+  public abstract function otherwise();
 
   public function findCommandByText($text) {
     foreach ($this->commands as $command) {
@@ -22,9 +26,7 @@ class Alisa {
     return null;
   }
 
-  private function fixCallbackResult(callable $cb) {
-    $result = $cb();
-
+  private function fixCallbackResult($result) {
     if ($result instanceof AlisaResponse) {
         $result = $result->toArray();
     }
@@ -51,10 +53,12 @@ class Alisa {
      * Приводим на всякий случай запрос пользователя к нижнему регистру
      */
     $textToCheck = preg_replace('/\./i', '', $text);
-    $textToCheck = mb_strtolower($textToCheck);
+    $textToCheck = function_exists('mb_strtolower') ? mb_strtolower($textToCheck) : strtolower($textToCheck);
 
     if (empty($textToCheck)) {
-        return $this->fixCallbackResult($this->helloCallback);
+        $hello = $this->reflectionClass->getMethod('hello');
+        $result = $hello->invoke($this);
+        return $this->fixCallbackResult($result);
     } else {
         $command = $this->findCommandByText($textToCheck);
 
@@ -62,7 +66,8 @@ class Alisa {
             return $this->fixCallbackResult($this->otherwiseCallback);
         }
 
-        return $this->fixCallbackResult($command['callback']);
+        $result = $command['callback']->invoke($this);
+        return $this->fixCallbackResult($result);
     }
   }
 
@@ -72,15 +77,15 @@ class Alisa {
       return $this;
   }
 
-  public function hello($callback) {
-      $this->helloCallback = $callback;
-      return $this;
-  }
+  // public function hello($callback) {
+  //     $this->helloCallback = $callback;
+  //     return $this;
+  // }
 
-  public function otherwise($callback) {
-      $this->otherwiseCallback = $callback;
-      return $this;
-  }
+  // public function otherwise($callback) {
+  //     $this->otherwiseCallback = $callback;
+  //     return $this;
+  // }
 
   public function dumpToTG($value = true) {
       $this->dumpToTG = $value;
@@ -88,26 +93,53 @@ class Alisa {
   }
 
   public function init() {
-      $dataRow = file_get_contents('php://input');
-      $this->data = json_decode($dataRow, true);
+    $this->reflectionClass = new ReflectionClass(static::class);
+    $listeners = [];
 
-      file_put_contents('alisalog.txt', date('Y-m-d H:i:s') . PHP_EOL . $dataRow . PHP_EOL, FILE_APPEND);
+    $whenMethod = $this->reflectionClass->getMethod('when');
 
-      try {
-          $data = [
-              'version' => '1.0',
-              'session' => [
-                  'session_id' => $this->data['session']['session_id'],
-                  'message_id' => $this->data['session']['message_id'],
-                  'user_id' => $this->data['session']['user_id']
-              ],
-              'response' => $this->process()
-          ];
-          header('Content-Type: application/json');
-          echo json_encode($data);
-      } catch(\Exception $e) {
-          header('Content-Type: application/json'); 
-          echo '["Error occured"]';
+    foreach ($this->reflectionClass->getMethods() as $method) {
+      $attributes = $method->getAttributes(When::class);
+
+      if (count($attributes) === 0) {
+        continue;
       }
+
+      foreach ($attributes as $attribute) {
+          $when = $attribute->newInstance();
+          $args = [];
+
+          foreach ($when->commands as $command) {
+              $args[] = $command;
+          }
+
+          $whenMethod->invokeArgs($this, [...$args, $method]);
+
+          // call_user_func_array([$this, 'when'], [...$args, $method]);
+          // $this->when(...$when->commands, $method->name);
+      }
+    }
+
+    $dataRow = file_get_contents('php://input');
+    $this->data = json_decode($dataRow, true);
+
+    file_put_contents('alisalog.txt', date('Y-m-d H:i:s') . PHP_EOL . $dataRow . PHP_EOL, FILE_APPEND);
+
+    try {
+        $data = [
+            'version' => '1.0',
+            'session' => [
+                'session_id' => $this->data['session']['session_id'],
+                'message_id' => $this->data['session']['message_id'],
+                'user_id' => $this->data['session']['user_id']
+            ],
+            'response' => $this->process()
+        ];
+        header('Content-Type: application/json');
+        echo json_encode($data);
+    } catch(\Exception $e) {
+        header('Content-Type: application/json'); 
+        echo '["Error occured"]';
+    }
   }
 }
