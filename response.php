@@ -16,26 +16,25 @@ class AlisaResponse {
     return $this;
   }
 
-  public function buttons($buttons) {
-    $this->buttons = array_map(function ($button) {
-      if (is_string($button)) {
-        $button = [
-          'title' => $button,
-        ];
-      }
-
-      return $button;
-    }, $buttons);
-    return $this;
-  }
-
-  public function button($button) {
+  private function fixButton($button) {
     if (is_string($button)) {
       $button = [
         'title' => $button,
       ];
     }
-    $this->buttons[] = $button;
+
+    return $button;
+  }
+
+  public function buttons($buttons) {
+    $this->buttons = array_map(function ($button) {
+      return $this->fixButton($button);
+    }, $buttons);
+    return $this;
+  }
+
+  public function button($button) {
+    $this->buttons[] = $this->fixButton($button);
     return $this;
   }
 
@@ -50,7 +49,7 @@ class AlisaResponse {
       'tts' =>  $this->tts ?? $this->text,
       'buttons' => $this->buttons,
       'end_session' => $this->endSession
-  ];
+    ];
   }
 }
 

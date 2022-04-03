@@ -13,13 +13,13 @@ class Alisa {
   public $dumpToTG = true;
 
   public function findCommandByText($text) {
-      foreach ($this->commands as $command) {
-          if (in_array($text, $command['commands'])) {
-              return $command;
-          }
+    foreach ($this->commands as $command) {
+      if (in_array($text, $command['commands'])) {
+        return $command;
       }
+    }
 
-      return null;
+    return null;
   }
 
   public function process() {
@@ -33,7 +33,7 @@ class Alisa {
            * Получаем что конкретно спросил пользователь
            */
           $text = $this->data['request']['command'];
-
+ 
           session_id($this->data['session']['session_id']); // В Чате спрашивали неодногравтно как использовать сессии в навыке - показываю
           session_start();
 
