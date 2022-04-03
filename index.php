@@ -32,7 +32,7 @@ Alisa::instance()
         ->endSession()
     )
 
-    ->when('монолог', fn () =>  response()
+    ->when('монолог', fn () => response()
         ->text(
             Monologue::instance(true)->getRandomSentence()
         )
