@@ -42,12 +42,23 @@ class AlisaResponse {
   }
 
   public function toArray() {
-    return [
+    $result = [
       'text' => $this->text,
-      'tts' =>  $this->tts ?? $this->text,
-      'buttons' => $this->buttons,
-      'end_session' => $this->endSession
     ];
+
+    if (!empty($this->tts)) {
+      $result['tts'] = $this->tts;
+    }
+
+    if (!empty($this->buttons)) {
+      $result['buttons'] = $this->buttons;
+    }
+
+    if (!empty($this->endSession)) {
+      $result['end_session'] = $this->end_session;
+    }
+
+    return $result;
   }
 }
 
