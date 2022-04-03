@@ -265,6 +265,7 @@ abstract class Alisa
             header('Content-Type: application/json');
             echo json_encode($data);
         } catch (\Exception $e) {
+            var_dump($e);
             header('Content-Type: application/json');
             echo '["Error occured"]';
         }

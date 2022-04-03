@@ -37,7 +37,7 @@ class SampleAlisa extends Alisa {
   }
 
   #[When('алиса хватит', 'хватит', 'выход', 'стоп', 'стопэ', 'харэ', 'хорош')]
-  public function stop() {
+  public function quit() {
     $this->clearHistory();
     return endSession('Приятного дня');
   }
@@ -52,13 +52,18 @@ class SampleAlisa extends Alisa {
     return Monologue::instance(false)->getRandomSentence();
   }
 
-  #[WhenRegex('/^скажи (\w+) (\d+) раза?$/iu')]
-  public function repeat($word, $count) {
+  #[WhenRegex('/^скажи ([\w\s]+) (\d+) раза?$/iu')]
+  public function repeat(string $word, int $count) {
     return join(' ', array_fill(0, $count, $word));
   }
 
   #[WhenRegex('/^свистни (\d+) раза?$/iu')]
-  public function whistle($count) {
+  public function whistle(int $count) {
     return join(' ', array_fill(0, $count, 'фью'));
   }
+
+  // #[WhenRegex('/^скажи (?P<word>\w+) (?P<count>\d+) раза?$/iu')]
+  // public function regexTest(string $word, int $count) {
+  //   return join(' ', array_fill(0, $count, $word));
+  // }
 }

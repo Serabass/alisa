@@ -5,8 +5,6 @@ echo chr(27).chr(91).'H'.chr(27).chr(91).'J';   //^[H^[J
 
 include_once 'response.php';
 
-var_dump(
-  response()
-    ->text('Привет! Я Алиса!')
-    ->button('помощь')
-);
+preg_match('/^скажи (?P<word>\w+) (?P<count>\d+) раза?$/iu', 'скажи фью 2 раза', $matches);
+
+var_dump($matches);
