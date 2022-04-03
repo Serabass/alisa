@@ -62,6 +62,7 @@ class SampleAlisa extends Alisa {
 
   #[WhenHistory(self::TOWNS_HISTORY)]
   public function towns($command) {
-    return $command . ' ' . $command;
+    $this->pushHistoryData(self::TOWNS_HISTORY, $command);
+    return join(' ', $this->historyStack[self::TOWNS_HISTORY]);
   }
 }

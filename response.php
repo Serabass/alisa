@@ -55,7 +55,7 @@ class AlisaResponse {
     }
 
     if (!empty($this->endSession)) {
-      $result['end_session'] = $this->end_session;
+      $result['end_session'] = $this->endSession;
     }
 
     return $result;

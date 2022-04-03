@@ -104,13 +104,19 @@ abstract class Alisa {
     }
 
     public function pushHistory($historyId) {
-        $this->historyStack[] = $historyId;
+        $this->historyStack[$historyId] = [];
+        $this->updateHistory();
+        return $this;
+    }
+
+    public function pushHistoryData($historyId, $data) {
+        $this->historyStack[$historyId][] = $data;
         $this->updateHistory();
         return $this;
     }
 
     public function checkHistory($historyId) {
-        return in_array($historyId, $this->historyStack);
+        return isset($this->historyStack[$historyId]);
     }
     
     public function clearHistory() {
@@ -145,8 +151,14 @@ abstract class Alisa {
         return [];
     }
 
-    session_id($this->data['session']['session_id']);
+    $sessionId = $this->data['session']['session_id'];
+
+    session_id($sessionId);
     session_start();
+
+    if (!isset($_SESSION['history'][$sessionId])) {
+        $_SESSION['history'][$sessionId] = [];
+    }
 
     $this->historyStack = $_SESSION['history'];
 
