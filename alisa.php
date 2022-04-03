@@ -12,6 +12,8 @@ abstract class Alisa {
   public $dumpToTG = true;
   private $reflectionClass;
 
+  public $historyStack = [];
+
   public abstract function hello();
   public abstract function otherwise();
 
@@ -65,11 +67,11 @@ abstract class Alisa {
     }
   }
 
-  public function when(...$commands) {
-    $callback = array_pop($commands);
-    $this->commands[] = compact('commands', 'callback');
-    return $this;
-}
+    public function when(...$commands) {
+        $callback = array_pop($commands);
+        $this->commands[] = compact('commands', 'callback');
+        return $this;
+    }
 
     public function whenHistory($historyId, $callback) {
         $this->historyCommands[] = compact('historyId', 'callback');
@@ -87,7 +89,15 @@ abstract class Alisa {
 
     file_put_contents('alisalog.txt', date('Y-m-d H:i:s') . PHP_EOL . $dataRow . PHP_EOL, FILE_APPEND);
 
-    if (!isset($this->data['request'], $this->data['request']['command'], $this->data['session'], $this->data['session']['session_id'], $this->data['session']['message_id'], $this->data['session']['user_id'])) {
+    if (!isset(
+        $this->data['request'],
+        $this->data['request']['command'],
+        $this->data['session'],
+        $this->data['session']['session_id'],
+        $this->data['session']['message_id'],
+        $this->data['session']['user_id']
+    )
+    ) {
         return [];
     }
 
