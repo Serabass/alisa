@@ -38,9 +38,7 @@ class SampleAlisa extends Alisa {
   #[When('алиса хватит', 'хватит', 'выход', 'стоп', 'стопэ', 'харэ', 'хорош')]
   public function stop() {
     $this->clearHistory();
-    return response()
-      ->text('Приятного дня')
-      ->endSession();
+    return endSession('Приятного дня');
   }
 
   #[When('монолог')]
@@ -51,18 +49,6 @@ class SampleAlisa extends Alisa {
   #[When('монолог без цензуры')]
   public function monologUncensored() {
     return Monologue::instance(false)->getRandomSentence();
-  }
-
-  #[When('города')]
-  public function townsGame() {
-    $this->pushHistory(self::TOWNS_HISTORY);
-    return 'играем в города. поехали';
-  }
-
-  #[WhenHistory(self::TOWNS_HISTORY)]
-  public function towns($command) {
-    $this->pushHistoryData(self::TOWNS_HISTORY, $command);
-    return join(' ', $this->historyStack[self::TOWNS_HISTORY]);
   }
 
   #[WhenRegex('/^скажи (\w+) (\d+) раза?$/iu')]

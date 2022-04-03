@@ -74,3 +74,11 @@ function response()
 {
   return new AlisaResponse();
 }
+
+function endSession($text)
+{
+  return response()
+    ->text($text)
+    ->endSession()
+  ;
+}
