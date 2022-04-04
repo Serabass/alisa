@@ -227,7 +227,7 @@ abstract class Alisa
         $this->session->start();
 
         if (!isset($this->session->history[$sessionId])) {
-            $this->session[$sessionId] = [];
+            $this->session->{$sessionId} = [];
         }
 
         $this->historyStack = $this->session;

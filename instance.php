@@ -72,6 +72,11 @@ class SampleAlisa extends Alisa {
     return "В слове $word " . mb_strlen($word) . " букв";
   }
 
+  #[When('поздоровайся с володей')]
+  public function helloVolodya() {
+    return "Привет, уё бище";
+  }
+
   // #[WhenRegex('/^скажи (?P<word>\w+) (?P<count>\d+) раза?$/iu')]
   // public function regexTest(string $word, int $count) {
   //   return join(' ', array_fill(0, $count, $word));
