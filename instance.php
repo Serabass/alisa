@@ -82,9 +82,19 @@ class SampleAlisa extends Alisa {
     return "Привет агриппка";
   }
 
+  #[When('поздоровайся с фаргатом')]
+  public function helloFargat() {
+    return "Здравствуй дедушка фаргат, самогонный аппарат";
+  }
+
   #[When('поздоровайся с максом')]
   public function helloMax() {
     return "Здравствуйте о великий максим красно солнышко";
+  }
+
+  #[When('поздоровайся с костей')]
+  public function helloKostya() {
+    return "О, великий константин, в мире вы такой один. Ни мышонок, ни лягушка, а неведома зверушка";
   }
 
   // #[WhenRegex('/^скажи (?P<word>\w+) (?P<count>\d+) раза?$/iu')]
