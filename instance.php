@@ -87,11 +87,6 @@ class SampleAlisa extends Alisa {
     return "Здравствуйте о великий максим красно солнышко";
   }
 
-  #[When('спой песню')]
-  public function singSong() {
-    return "Я не знаю, я не знаю, что мне делать";
-  }
-
   // #[WhenRegex('/^скажи (?P<word>\w+) (?P<count>\d+) раза?$/iu')]
   // public function regexTest(string $word, int $count) {
   //   return join(' ', array_fill(0, $count, $word));
