@@ -1,13 +1,12 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+include_once 'common.php';
+include_once 'clear.php';
 
-// clear the console
-echo chr(27).chr(91).'H'.chr(27).chr(91).'J';   //^[H^[J  
+include_once 'history/history-base.php';
 
-include_once 'response.php';
+$history = new JSONHistory();
 
-preg_match('/^скажи (?P<word>\w+) (?P<count>\d+) раза?$/iu', 'скажи фью 2 раза', $matches);
+$history->put('Привет! Я Алиса!');
 
-var_dump($matches);
+var_dump($history->all());

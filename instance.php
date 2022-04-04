@@ -74,7 +74,7 @@ class SampleAlisa extends Alisa {
 
   #[When('поздоровайся с володей')]
   public function helloVolodya() {
-    return "Привет, уё бище";
+    return "Привет бородатое уё бище";
   }
 
   // #[WhenRegex('/^скажи (?P<word>\w+) (?P<count>\d+) раза?$/iu')]
