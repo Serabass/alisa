@@ -1,6 +1,7 @@
 <?php
 
 include_once 'alisa.php';
+include_once 'sova.php';
 include_once 'attributes.php';
 include_once 'monologue.php';
 
@@ -95,6 +96,11 @@ class SampleAlisa extends Alisa {
   #[When('поздоровайся с костей')]
   public function helloKostya() {
     return "О, великий константин, в мире вы такой один. Ни мышонок, ни лягушка, а неведома зверушка";
+  }
+
+  #[When('цитаты из совы')]
+  public function sova() {
+    return sova()->random();
   }
 
   // #[WhenRegex('/^скажи (?P<word>\w+) (?P<count>\d+) раза?$/iu')]
