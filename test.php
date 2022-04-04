@@ -1,3 +1,11 @@
+<?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+include_once 'instance.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,7 +98,7 @@
 
     <datalist id="list">
         <?php foreach (SampleAlisa::instance()->meta() as $row) { ?>
-            <option value="12313" />
+            <option value="<?php echo $row; ?>" />
         <?php } ?>
     </datalist>
 </body>
