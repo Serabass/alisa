@@ -1,0 +1,250 @@
+2022-04-04 11:05:51
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f5357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "сколько букв в слове стрессоустойчивый",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-04 11:11:49
+{
+    "meta": {
+        "locale": "ru-RU",
+        "timezone": "Asia/Almaty",
+        "client_id": "ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)",
+        "interfaces": {
+            "screen": {},
+            "payments": {},
+            "account_linking": {}
+        }
+    },
+    "session": {
+        "message_id": 0,
+        "session_id": "f5357ad2-c881-40e2-bd52-f04838d9eef5",
+        "skill_id": "2333aacc-2c69-4472-8540-6cfca23ef630",
+        "user": {
+            "user_id": "2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"
+        },
+        "application": {
+            "application_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"
+        },
+        "user_id": "1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5",
+        "new": true
+    },
+    "request": {
+        "command": "сколько букв в слове стрессоустойчивый",
+        "original_utterance": "",
+        "nlu": {
+            "tokens": [],
+            "entities": [],
+            "intents": {}
+        },
+        "markup": {
+            "dangerous_context": false
+        },
+        "type": "SimpleUtterance"
+    },
+    "version": "1.0"
+}
+2022-04-04 11:22:18
+
+2022-04-04 11:22:18
+
+2022-04-04 11:22:21
+
+2022-04-04 11:22:33
+
+2022-04-04 11:22:34
+
+2022-04-04 11:22:37
+
+2022-04-04 11:22:45
+
+2022-04-04 11:22:45
+
+2022-04-04 11:22:46
+
+2022-04-04 11:22:46
+
+2022-04-04 11:22:49
+
+2022-04-04 11:23:20
+
+2022-04-04 11:24:12
+
+2022-04-04 11:24:48
+
+2022-04-04 11:25:14
+
+2022-04-04 11:25:46
+
+2022-04-04 11:28:12
+
+2022-04-04 11:28:16
+
+2022-04-04 11:28:30
+
+2022-04-04 11:28:37
+
+2022-04-04 11:28:58
+
+2022-04-04 11:29:22
+
+2022-04-04 11:29:24
+meta%5Blocale%5D=ru-RU&meta%5Btimezone%5D=Asia%2FAlmaty&meta%5Bclient_id%5D=ru.yandex.searchplugin%2F22.32+(OPPO+CPH1893%3B+android+9)&session%5Bmessage_id%5D=0&session%5Bsession_id%5D=f5357ad2-c881-40e2-bd52-f04838d9eef5&session%5Bskill_id%5D=2333aacc-2c69-4472-8540-6cfca23ef630&session%5Buser%5D%5Buser_id%5D=2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941&session%5Bapplication%5D%5Bapplication_id%5D=1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5&session%5Buser_id%5D=1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5&session%5Bnew%5D=true&request%5Bcommand%5D=77&request%5Boriginal_utterance%5D=&request%5Bmarkup%5D%5Bdangerous_context%5D=false&request%5Btype%5D=SimpleUtterance&version=1.0
+2022-04-04 11:29:43
+
+2022-04-04 11:30:15
+
+2022-04-04 11:30:17
+{"meta":{"locale":"ru-RU","timezone":"Asia/Almaty","client_id":"ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)","interfaces":{"screen":{},"payments":{},"account_linking":{}}},"session":{"message_id":0,"session_id":"f5357ad2-c881-40e2-bd52-f04838d9eef5","skill_id":"2333aacc-2c69-4472-8540-6cfca23ef630","user":{"user_id":"2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"},"application":{"application_id":"1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"},"user_id":"1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5","new":true},"request":{"command":"6664","original_utterance":"","nlu":{"tokens":[],"entities":[],"intents":{}},"markup":{"dangerous_context":false},"type":"SimpleUtterance"},"version":"1.0"}
+2022-04-04 11:31:05
+
+2022-04-04 11:31:13
+{"meta":{"locale":"ru-RU","timezone":"Asia/Almaty","client_id":"ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)","interfaces":{"screen":{},"payments":{},"account_linking":{}}},"session":{"message_id":0,"session_id":"f5357ad2-c881-40e2-bd52-f04838d9eef5","skill_id":"2333aacc-2c69-4472-8540-6cfca23ef630","user":{"user_id":"2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"},"application":{"application_id":"1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"},"user_id":"1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5","new":true},"request":{"command":"скажи привет 3 раза","original_utterance":"","nlu":{"tokens":[],"entities":[],"intents":{}},"markup":{"dangerous_context":false},"type":"SimpleUtterance"},"version":"1.0"}
+2022-04-04 11:31:34
+
+2022-04-04 11:31:38
+{"meta":{"locale":"ru-RU","timezone":"Asia/Almaty","client_id":"ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)","interfaces":{"screen":{},"payments":{},"account_linking":{}}},"session":{"message_id":0,"session_id":"f5357ad2-c881-40e2-bd52-f04838d9eef5","skill_id":"2333aacc-2c69-4472-8540-6cfca23ef630","user":{"user_id":"2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"},"application":{"application_id":"1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"},"user_id":"1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5","new":true},"request":{"command":"скажи привет 3 раза","original_utterance":"","nlu":{"tokens":[],"entities":[],"intents":{}},"markup":{"dangerous_context":false},"type":"SimpleUtterance"},"version":"1.0"}
+2022-04-04 11:31:44
+{"meta":{"locale":"ru-RU","timezone":"Asia/Almaty","client_id":"ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)","interfaces":{"screen":{},"payments":{},"account_linking":{}}},"session":{"message_id":0,"session_id":"f5357ad2-c881-40e2-bd52-f04838d9eef5","skill_id":"2333aacc-2c69-4472-8540-6cfca23ef630","user":{"user_id":"2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"},"application":{"application_id":"1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"},"user_id":"1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5","new":true},"request":{"command":"скажи привет 5 раз","original_utterance":"","nlu":{"tokens":[],"entities":[],"intents":{}},"markup":{"dangerous_context":false},"type":"SimpleUtterance"},"version":"1.0"}
+2022-04-04 11:31:57
+
+2022-04-04 11:32:03
+{"meta":{"locale":"ru-RU","timezone":"Asia/Almaty","client_id":"ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)","interfaces":{"screen":{},"payments":{},"account_linking":{}}},"session":{"message_id":0,"session_id":"f5357ad2-c881-40e2-bd52-f04838d9eef5","skill_id":"2333aacc-2c69-4472-8540-6cfca23ef630","user":{"user_id":"2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"},"application":{"application_id":"1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"},"user_id":"1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5","new":true},"request":{"command":"скажи привет три раза","original_utterance":"","nlu":{"tokens":[],"entities":[],"intents":{}},"markup":{"dangerous_context":false},"type":"SimpleUtterance"},"version":"1.0"}
+2022-04-04 11:32:08
+{"meta":{"locale":"ru-RU","timezone":"Asia/Almaty","client_id":"ru.yandex.searchplugin/22.32 (OPPO CPH1893; android 9)","interfaces":{"screen":{},"payments":{},"account_linking":{}}},"session":{"message_id":0,"session_id":"f5357ad2-c881-40e2-bd52-f04838d9eef5","skill_id":"2333aacc-2c69-4472-8540-6cfca23ef630","user":{"user_id":"2A39887F6BE152F6D5A7E5C158ED9C431630C113F9EF120140E73D30BA4C6941"},"application":{"application_id":"1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5"},"user_id":"1F7355D902E191B6B004EDC66E57A16428B4166F0F19D0DCB0C7CF13E069CFA5","new":true},"request":{"command":"скажи привет 3 раза","original_utterance":"","nlu":{"tokens":[],"entities":[],"intents":{}},"markup":{"dangerous_context":false},"type":"SimpleUtterance"},"version":"1.0"}
+2022-04-04 11:32:10
+
+2022-04-04 11:32:31
+
+2022-04-04 11:32:31
+
+2022-04-04 11:33:26
+
+2022-04-04 11:33:26
+
+2022-04-04 11:34:12
+
+2022-04-04 11:34:12
+
+2022-04-04 11:34:17
+
+2022-04-04 11:34:17
+
+2022-04-04 11:34:47
+
+2022-04-04 11:34:47
+
+2022-04-04 11:34:49
+
+2022-04-04 11:34:53
+
+2022-04-04 11:34:53
+
+2022-04-04 11:35:12
+
+2022-04-04 11:35:12
+
+2022-04-04 11:35:43
+
+2022-04-04 11:35:43
+
+2022-04-04 11:35:52
+
+2022-04-04 11:35:52
+
+2022-04-04 11:36:10
+
+2022-04-04 11:36:10
+
+2022-04-04 11:36:24
+
+2022-04-04 11:36:24
+
+2022-04-04 11:36:37
+
+2022-04-04 11:36:37
+
+2022-04-04 11:36:46
+
+2022-04-04 11:36:46
+
+2022-04-04 11:37:25
+
+2022-04-04 11:37:25
+
+2022-04-04 11:37:41
+
+2022-04-04 11:37:49
+
+2022-04-04 11:37:49
+
+2022-04-04 11:40:59
+
+2022-04-04 11:41:00
+
+2022-04-04 11:41:00
+
+2022-04-04 11:41:00
+
+2022-04-04 11:41:06
+
+2022-04-04 11:41:22
+
+2022-04-04 11:41:32
+
+2022-04-04 11:41:37
+
+2022-04-04 11:41:38
+
+2022-04-04 11:41:56
+
+2022-04-04 11:41:58
+
+2022-04-04 11:41:58
+
+2022-04-04 11:42:10
+
+2022-04-04 11:42:11
+
+2022-04-04 11:42:12
+
+2022-04-04 11:42:24
+
+2022-04-04 11:42:26
+
+2022-04-04 11:42:53
+

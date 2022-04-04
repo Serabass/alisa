@@ -185,6 +185,29 @@ abstract class Alisa
         return $this;
     }
 
+    public function meta() {
+        $result = [];
+
+        foreach ($this->reflectionClass->getMethods() as $method) {
+            $whenAttributes = $method->getAttributes(When::class);
+            if (count($whenAttributes) > 0) {
+                foreach ($whenAttributes as $attribute) {
+                    $when = $attribute->newInstance();
+                    $result[] = join(', ', $when->commands);
+                }
+            }
+            $whenAttributes = $method->getAttributes(WhenRegex::class);
+            if (count($whenAttributes) > 0) {
+                foreach ($whenAttributes as $attribute) {
+                    $when = $attribute->newInstance();
+                    $result[] = $when->regex;
+                }
+            }
+        };
+
+        return $result;
+    }
+
     public function init()
     {
         if (!isset(
