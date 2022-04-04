@@ -62,7 +62,7 @@ class SampleAlisa extends Alisa {
     return join(' ', array_fill(0, $count, 'фью'));
   }
 
-  #[WhenRegex('/^(до|ре|ми|фа|соль|ля|си)[\s-](\d+) октавы\.?$/iu')]
+  #[WhenRegex('/^(до|ре|ми|фа|соль|ля|си)[\s-](\d+)[\s-]октавы\.?$/iu')]
   public function notesExplain(string $name, int $octave) {
     return "Нота $name на $octave октаве";
   }
@@ -74,7 +74,22 @@ class SampleAlisa extends Alisa {
 
   #[When('поздоровайся с володей')]
   public function helloVolodya() {
-    return "Привет бородатое уё бище";
+    return "Привет вовка морковка";
+  }
+
+  #[When('поздоровайся с димой')]
+  public function helloDima() {
+    return "Привет агриппка";
+  }
+
+  #[When('поздоровайся с максом')]
+  public function helloMax() {
+    return "Здравствуйте о великий максим красно солнышко";
+  }
+
+  #[When('спой песню')]
+  public function singSong() {
+    return "Я не знаю, я не знаю, что мне делать";
   }
 
   // #[WhenRegex('/^скажи (?P<word>\w+) (?P<count>\d+) раза?$/iu')]

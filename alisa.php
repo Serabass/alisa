@@ -185,7 +185,8 @@ abstract class Alisa
         return $this;
     }
 
-    public function meta() {
+    public function meta()
+    {
         $result = [];
 
         foreach ($this->reflectionClass->getMethods() as $method) {
