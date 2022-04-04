@@ -74,12 +74,12 @@ class SampleAlisa extends Alisa {
 
   #[When('поздоровайся с володей')]
   public function helloVolodya() {
-    return "Привет вовка морковка";
+    return "Здравствуй дедушка володя, боже что тут происходит?";
   }
 
   #[When('поздоровайся с димой')]
   public function helloDima() {
-    return "Привет агриппка";
+    return "Здравствуй дедушка агрипп, ты похож на белый гриб";
   }
 
   #[When('поздоровайся с фаргатом')]
