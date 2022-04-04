@@ -44,12 +44,12 @@ class SampleAlisa extends Alisa {
 
   #[When('монолог')]
   public function monologue() {
-    return Monologue::instance(true)->getRandomSentence();
+    return monologue(true)->getRandomSentence();
   }
 
   #[When('монолог без цензуры')]
-  public function monologUncensored() {
-    return Monologue::instance(false)->getRandomSentence();
+  public function monologueUncensored() {
+    return monologue(false)->getRandomSentence();
   }
 
   #[WhenRegex('/^скажи ([\w\s]+) (\d+) раза?$/iu')]
@@ -60,6 +60,16 @@ class SampleAlisa extends Alisa {
   #[WhenRegex('/^свистни (\d+) раза?$/iu')]
   public function whistle(int $count) {
     return join(' ', array_fill(0, $count, 'фью'));
+  }
+
+  #[WhenRegex('/^(до|ре|ми|фа|соль|ля|си)[\s-](\d+) октавы\.?$/iu')]
+  public function notesExplain(string $name, int $octave) {
+    return "Нота $name на $octave октаве";
+  }
+
+  #[WhenRegex('/^сколько букв в слове (\w+)$/iu')]
+  public function wordLength(string $word) {
+    return "В слове $word " . mb_strlen($word) . " букв";
   }
 
   // #[WhenRegex('/^скажи (?P<word>\w+) (?P<count>\d+) раза?$/iu')]

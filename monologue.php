@@ -3,7 +3,7 @@
 class Monologue
 {
   private static $instance;
-  public static function instance($censored)
+  public static function instance(bool $censored)
   {
     return self::$instance ?? self::$instance = new Monologue($censored);
   }
@@ -118,7 +118,7 @@ class Monologue
   пошел наслаждаться прекрасным осенним закатом на берегу 
   теплой южной реки. Всё, ступай, и я пойду';
 
-  public function __construct($censored)
+  public function __construct(bool $censored)
   {
     $this->censored = $censored;
   }
@@ -130,4 +130,9 @@ class Monologue
 
     return $lines[array_rand($lines)];
   }
+}
+
+function monologue(bool $censored)
+{
+  return Monologue::instance($censored);
 }

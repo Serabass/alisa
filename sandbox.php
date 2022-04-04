@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // clear the console
 echo chr(27).chr(91).'H'.chr(27).chr(91).'J';   //^[H^[J  
 
