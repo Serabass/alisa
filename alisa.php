@@ -1,5 +1,8 @@
 <?php
 
+include_once 'input.php';
+include_once 'session.php';
+
 abstract class Alisa
 {
     protected static $instance;
@@ -20,13 +23,20 @@ abstract class Alisa
     public abstract function hello();
     public abstract function otherwise();
 
+    public function __construct()
+    {
+        $this->data = Input::json();
+        $this->reflectionClass = new ReflectionClass($this);
+    }
+
     protected function updateHistory()
     {
-        if (empty($_SESSION['history'])) {
-            $_SESSION['history'] = [];
+        $this->data['name'] = 1;
+        if (empty($this->session->history)) {
+            $this->session->history = [];
         }
 
-        $_SESSION['history'] = $this->historyStack;
+        $this->session->history = $this->historyStack;
     }
 
     protected function findCommandByText($text)
@@ -177,11 +187,6 @@ abstract class Alisa
 
     public function init()
     {
-        $dataRow = file_get_contents('php://input');
-        $this->data = json_decode($dataRow, true);
-
-        file_put_contents('alisalog.txt', date('Y-m-d H:i:s') . PHP_EOL . $dataRow . PHP_EOL, FILE_APPEND);
-
         if (!isset(
             $this->data['request'],
             $this->data['request']['command'],
@@ -195,16 +200,15 @@ abstract class Alisa
 
         $sessionId = $this->data['session']['session_id'];
 
-        session_id($sessionId);
-        session_start();
+        $this->session = Session::instance($sessionId);
 
-        if (!isset($_SESSION['history'][$sessionId])) {
-            $_SESSION['history'][$sessionId] = [];
+        $this->session->start();
+
+        if (!isset($this->session->history[$sessionId])) {
+            $this->session[$sessionId] = [];
         }
 
-        $this->historyStack = $_SESSION['history'];
-
-        $this->reflectionClass = new ReflectionClass(static::class);
+        $this->historyStack = $this->session;
 
         $whenMethod = $this->reflectionClass->getMethod('when');
         $whenHistoryMethod = $this->reflectionClass->getMethod('whenHistory');
