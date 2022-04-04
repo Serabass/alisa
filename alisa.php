@@ -201,7 +201,6 @@ abstract class Alisa
         $sessionId = $this->data['session']['session_id'];
 
         $this->session = Session::instance($sessionId);
-
         $this->session->start();
 
         if (!isset($this->session->history[$sessionId])) {
