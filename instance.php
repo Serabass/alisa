@@ -15,7 +15,7 @@ class SampleAlisa extends Alisa {
 
   public function otherwise() {
     return response()
-      ->text('Я не знаю такой команды.');
+      ->text('Моя твоя не понимать.');
   }
   
   #[When('помощь', 'хелп', 'помоги')]
@@ -98,7 +98,7 @@ class SampleAlisa extends Alisa {
     return "О, великий константин, в мире вы такой один. Ни мышонок, ни лягушка, а неведома зверушка";
   }
 
-  #[WhenRegex('/^цитаты (?:из )?совы$/iu')]
+  #[When('сова')]
   public function sova() {
     return sova()->random();
   }

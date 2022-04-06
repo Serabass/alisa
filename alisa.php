@@ -79,10 +79,10 @@ abstract class Alisa
         /**
          * Получаем что конкретно спросил пользователь
          */
-        $text = $this->data['request']['command'];
+        $text = $this->data->request->command;
 
         /**
-         * Приводим на всякий случай запрос пользователя к нижнему регистру
+         * Приводим на всякий случай запрос пользователя к нижнему регистру и сносим точку в конце (иногда она её ставит)
          */
         $textToCheck = preg_replace('/\./i', '', $text);
         $textToCheck = function_exists('mb_strtolower') ? mb_strtolower($textToCheck) : strtolower($textToCheck);
@@ -212,17 +212,17 @@ abstract class Alisa
     public function init()
     {
         if (!isset(
-            $this->data['request'],
-            $this->data['request']['command'],
-            $this->data['session'],
-            $this->data['session']['session_id'],
-            $this->data['session']['message_id'],
-            $this->data['session']['user_id']
+            $this->data->request,
+            $this->data->request->command,
+            $this->data->session,
+            $this->data->session->session_id,
+            $this->data->session->message_id,
+            $this->data->session->user_id
         )) {
             return [];
         }
 
-        $sessionId = $this->data['session']['session_id'];
+        $sessionId = $this->data->session->session_id;
 
         $this->session = Session::instance($sessionId);
         $this->session->start();
@@ -280,9 +280,9 @@ abstract class Alisa
             $data = [
                 'version' => '1.0',
                 'session' => [
-                    'session_id' => $this->data['session']['session_id'],
-                    'message_id' => $this->data['session']['message_id'],
-                    'user_id' => $this->data['session']['user_id']
+                    'session_id' => $this->data->session->session_id,
+                    'message_id' => $this->data->session->message_id,
+                    'user_id' => $this->data->session->user_id
                 ],
                 'response' => $this->process(),
                 'data' => [

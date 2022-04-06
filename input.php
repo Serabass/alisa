@@ -6,6 +6,6 @@ class Input {
 
         file_put_contents('alisalog.txt', date('Y-m-d H:i:s') . '|' . $dataRow . PHP_EOL, FILE_APPEND);
 
-        return json_decode($dataRow, true);
+        return json_decode($dataRow, false);
     }
 }
