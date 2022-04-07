@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serve": "php -S localhost:8000 -t .",
     "start": "nodemon -w . -e php -x \"php sandbox.php\""
   },
   "repository": {

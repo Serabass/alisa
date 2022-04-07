@@ -3,17 +3,7 @@
 include_once 'common.php';
 include_once 'instance.php';
 include_once 'clear.php';
-
-function convertToObject($array) {
-  $object = new stdClass();
-  foreach ($array as $key => $value) {
-      if (is_array($value)) {
-          $value = convertToObject($value);
-      }
-      $object->$key = $value;
-  }
-  return $object;
-}
+include_once 'toobject.php';
 
 $array = [
   'session' => [
@@ -26,7 +16,7 @@ $array = [
   ]
 ];
 
-$result = SampleAlisa::instance(convertToObject($array))
+$result = SampleAlisa::instance(ToObject($array))
   ->init();
 
 var_dump($result);
