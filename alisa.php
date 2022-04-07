@@ -2,13 +2,15 @@
 
 include_once 'input.php';
 include_once 'session.php';
+include_once 'str.php';
+include_once 'response.php';
 
 abstract class Alisa
 {
     protected static $instance;
-    public static function instance()
+    public static function instance($json = null)
     {
-        return static::$instance ?? static::$instance = new static();
+        return static::$instance ?? static::$instance = new static($json);
     }
 
     protected $data;
@@ -23,9 +25,9 @@ abstract class Alisa
     public abstract function hello();
     public abstract function otherwise();
 
-    public function __construct()
+    public function __construct($json = null)
     {
-        $this->data = Input::json();
+        $this->data = $json ?? Input::json();
         $this->reflectionClass = new ReflectionClass($this);
     }
 
@@ -85,7 +87,7 @@ abstract class Alisa
          * Приводим на всякий случай запрос пользователя к нижнему регистру и сносим точку в конце (иногда она её ставит)
          */
         $textToCheck = preg_replace('/\./i', '', $text);
-        $textToCheck = function_exists('mb_strtolower') ? mb_strtolower($textToCheck) : strtolower($textToCheck);
+        $textToCheck = Str::toLower($textToCheck);
 
         if (empty($textToCheck)) {
             $hello = $this->reflectionClass->getMethod('hello');
@@ -289,12 +291,19 @@ abstract class Alisa
                     'historyStack' => $this->historyStack
                 ]
             ];
+
+            if (CLI::check()) {
+                return $data;
+            }
+            
             header('Content-Type: application/json');
             echo json_encode($data);
         } catch (\Exception $e) {
             var_dump($e);
-            header('Content-Type: application/json');
-            echo '["Error occured"]';
+            if (!CLI::check()) {
+                header('Content-Type: application/json');
+                echo '["Error occured"]';
+            }
         }
     }
 }

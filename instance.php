@@ -4,6 +4,7 @@ include_once 'alisa.php';
 include_once 'sova.php';
 include_once 'attributes.php';
 include_once 'monologue.php';
+include_once 'cli.php';
 
 class SampleAlisa extends Alisa {
   public const TOWNS_HISTORY = 'towns_history';

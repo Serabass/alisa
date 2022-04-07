@@ -1,0 +1,20 @@
+{
+  "name": "alisa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -w . -e php -x \"php sandbox.php\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serabass/alisa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Serabass/alisa/issues"
+  },
+  "homepage": "https://github.com/Serabass/alisa#readme"
+}

@@ -1,6 +1,11 @@
 <?php
 
 class Sova {
+  private static $instance;
+  public static function instance() {
+    return static::$instance ?? static::$instance = new static();
+  }
+
   public $data = [
     "Как говорил мой папаша: хочешь незаметно дёрнуть ручник, залезь под одеяло ",
     "Носороги - это единственные кто попал в красную книгу через постель ",
@@ -82,5 +87,5 @@ class Sova {
 }
 
 function sova() {
-  return new Sova();
+  return Sova::instance();
 }
