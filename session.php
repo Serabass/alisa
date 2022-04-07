@@ -18,11 +18,12 @@ class Session
 
     public function start()
     {
-
-        if (!CLI::check()) {
-            session_id($this->id);
-            session_start();
+        if (CLI::check()) {
+            return;
         }
+
+        session_id($this->id);
+        session_start();
     }
 
     public function __get($name)
