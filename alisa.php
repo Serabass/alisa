@@ -70,7 +70,10 @@ abstract class Alisa
         }
 
         if (is_string($result)) {
-            $result = response()->text($result)->toArray();
+            $result = response()
+                ->text($result)
+                ->tts($result)
+                ->toArray();
         }
 
         return $result;

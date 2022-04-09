@@ -72,5 +72,6 @@ function endSession($text)
 {
   return response()
     ->text($text)
+    ->tts($text)
     ->endSession();
 }
